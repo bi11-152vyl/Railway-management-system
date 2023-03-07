@@ -1,0 +1,4 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `customerViewAll`()
+BEGIN
+ Select * from customer;
+END

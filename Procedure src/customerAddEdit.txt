@@ -1,0 +1,21 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `customerAdd/Edit`(
+_ID INT,
+_Name text,
+_Email text,
+_Age text,
+_Gender text
+)
+BEGIN
+  IF _ID = 0 Then
+     insert into customer (Name, Email, Age, Gender )
+	 values (_Name, _Email, _Age, _Gender);
+   else  
+   UPDATE customer
+   set
+   Name = _Name,
+   Email =_Email, 
+   Age =_Age, 
+   Gender =_Gender
+   where ID = _ID;
+  End if;
+END

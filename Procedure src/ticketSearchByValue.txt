@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ticketSearchByValue`(
+_SearchValue text)
+BEGIN
+ SELECT * 
+ FROM ticket 
+ WHERE
+ Departure LIKE CONCAT('%',_SearchValue,'%') || Destination LIKE CONCAT('%',_SearchValue,'%') || Type LIKE CONCAT('%',_SearchValue,'%');
+END

@@ -1,0 +1,4 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `workerViewAll`()
+BEGIN
+select * from worker;
+END

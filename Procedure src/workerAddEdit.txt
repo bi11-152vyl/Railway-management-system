@@ -1,0 +1,12 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `workerAdd/Edit`(
+_Name text,
+_DOB text,
+_Email text,
+_Shift text,
+_Job text,
+_Drv_License text
+)
+BEGIN
+     insert into worker (Name, DOB, Email, Shift, Job, Drv_Lisence )
+	 values (_Name, _DOB, _Email, _Shift, _Job, _Drv_Lisence);
+END

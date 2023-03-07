@@ -1,0 +1,5 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `customerDeleteByID`(_ID int)
+BEGIN
+    DELETE FROM customer
+    WHERE ID= _ID;
+END

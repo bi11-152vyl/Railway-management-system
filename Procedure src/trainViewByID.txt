@@ -1,0 +1,5 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `trainViewByID`(_ID INT)
+BEGIN
+SELECT * FROM train
+where ID = _ID;
+END

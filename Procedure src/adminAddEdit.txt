@@ -1,0 +1,23 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `adminAdd/Edit`(
+_ID INT,
+_Name text,
+_ContactAdd text,
+_personalEmail text,
+_adminEmail text,
+_adminPass text
+)
+BEGIN
+  IF _ID = 0 Then
+     insert into admin ( Name, ContactAdd, personalEmail, adminEmail, adminPass)
+	 values (_Name, _ContactAdd, _personalEmail, _adminEmail, _adminPass);
+   else  
+   UPDATE admin
+   set
+   Name = _Name,
+   ContactAdd =_ContactAdd, 
+   personalEmail =_personalEmail, 
+   adminEmail =_adminEmail, 
+   adminPass =_adminPass
+   where ID = _ID;
+  End if;
+END

@@ -1,0 +1,7 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `customerViewByID`(
+_ID INT)
+BEGIN
+   SELECT * 
+   FROM customer 
+   WHERE ID = _ID;
+END

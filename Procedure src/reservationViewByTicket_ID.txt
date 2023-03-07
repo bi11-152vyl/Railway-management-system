@@ -1,0 +1,5 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `reservationViewByTicket_ID`(_Ticket_ID INT)
+BEGIN
+SELECT * FROM reservation
+where Ticket_ID = _Ticket_ID;
+END
